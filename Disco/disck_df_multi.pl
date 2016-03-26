@@ -25,13 +25,14 @@ open(IN, "df -h |");
 
 while(<IN>){
 	chomp();
-	if (/\s(\d+[\.\,]\w+|\d+\w+|\d+)\s+(\d+[\.\,]\w+|\d+\w+|\d+)\s+(\d+[\.\,]\w+|\d+\w+|\d+)\s+(\d+)%\s+([\/A-Za-z0-9]+)/){
-		my $size=$1;
-		my $used=$2;
-		my $use=$4;
-		my $avail=$3;
-		my $disk=$5;
-		print MIFICH "command[$disk]=$DIR/check_df_multi.pl $size $used $avail $use $warning $critical\n";
+	if (/\s(\w+)\s+(\d+[\.\,]\w+|\d+\w+|\d+)\s+(\d+[\.\,]\w+|\d+\w+|\d+)\s+(\d+[\.\,]\w+|\d+\w+|\d+)\s+(\d+)%\s+([\/A-Za-z0-9]+)/){
+		my $type=$1
+		my $size=$2;
+		my $used=$3;
+		my $use=$5;
+		my $avail=$4;
+		my $disk=$6;
+		print MIFICH "command[$disk]=$DIR/check_df_multi.pl $type $size $used $avail $use $warning $critical\n";
 	}
 }
 close IN;
