@@ -1,16 +1,23 @@
 #!/usr/bin/perl
-$size=$ARGV[0];
-$used=$ARGV[1];
-$avail=$ARGV[2];
-$use=$ARGV[3];
-$por_warning=$ARGV[4];
-$por_critical=$ARGV[5];
+#####################check_disk_multi ##############
+# Version : 0.1
+# Date :  2016 03 
+# Author  : Juargo (Jorge Retamal)
+# GIT: https://github.com/Juargo/Monitoreo
+#################################################################
 
-if ($use < $por_warning){ print " OK - Uso = $used($use%)\tTTL: $size\t<strong>Quedan: $avail</strong> | uso=$use;$por_warning;$por_critical;0;100;"; exit(0);}
+($type,$size,$used,$avail,$use,$warning,$critical)=@ARGV;
 
-elsif ($use >= $por_warning && $use < $por_critical){ print " WARNING - Uso = $used($use%)\tTTL: $size\t<strong>Quedan: $avail</strong>| uso=$use;$por_warning;$por_critical;0;100;"; exit(1);}
-
-elsif ($use >= $por_critical){print "CRITICAL - Uso = $used($use%)\tTTL: $size\t<strong>Quedan: $avail</strong>| uso=$use;$por_warning;$por_critical;0;100;"; exit(2);}
-
-else{print "UNKNOW -";exit(3);}
+if ($use<$warning){
+	print ":: OK :::: Total=$size :::: Uso=$used($use%) :::::: Disponible=$avail :::::: ---Type=$type|uso=$use%;$warning;$critical;0;100";exit(0);
+}
+elsif ($use >= $warning && $use < $critical){
+	print ":: WARNING :::: total=$size :::: Uso=$used($use%) :::::: Disponible=$avail :::::---Type=$type|uso=$use%;$warning;$critical;0;100";exit(1);
+}
+elsif ($use >= $critical){
+	print ":: CRITICAL :::: total=$size :::: Uso=$used($use%) :::::: Disponible=$avail ::::: ---Type=$type|uso=$use%;$warning;$critical;0;100";exit(2);
+}
+else{
+	print "UNKNOW -";exit(3);
+}
 

@@ -1,28 +1,11 @@
-command[/dev]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 797M 0 797M 0 10 
-command[/dev/shm]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 803M 184K 803M 1 10 
-command[/run]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 803M 2,0M 801M 1 10 
-command[/sys/fs/cgroup]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 803M 0 803M 0 10 
-command[/]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/tmp]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/spool]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/opt]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/tmp]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/usr/local]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/log]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/opt]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/crash]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/srv]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/lib/pgsql]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/lib/mailman]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/lib/named]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/lib/libvirt/images]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/lib/mariadb]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/var/lib/mysql]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/boot/grub2/i386]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/boot/grub2/x86]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 13G 5,3G 6,3G 46 10 
-command[/home]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 18G 70M 18G 1 10 
-command[/run/media/juargo/openSUSE]=/home/juargo/Monitoreo/Disco/check_df_multi.pl 4,4G 4,4G 0 100 10 
+command[/]=/home/soporte/Monitoreo/Disco/check_df_multi.pl rootfs 3,4G 3,1G 152M 96 97 98
+command[/dev]=/home/soporte/Monitoreo/Disco/check_df_multi.pl devtmpfs 10M 0 10M 0 97 98
+command[/run]=/home/soporte/Monitoreo/Disco/check_df_multi.pl tmpfs 587M 272K 587M 1 97 98
+command[/]=/home/soporte/Monitoreo/Disco/check_df_multi.pl ext4 3,4G 3,1G 152M 96 97 98
+command[/run/lock]=/home/soporte/Monitoreo/Disco/check_df_multi.pl tmpfs 5,0M 0 5,0M 0 97 98
+command[/run/shm]=/home/soporte/Monitoreo/Disco/check_df_multi.pl tmpfs 1,3G 0 1,3G 0 97 98
+command[/home]=/home/soporte/Monitoreo/Disco/check_df_multi.pl ext4 8,1G 6,1G 1,6G 80 97 98
+command[/Data]=/home/soporte/Monitoreo/Disco/check_df_multi.pl ext4 9,9G 151M 9,2G 2 97 98
 
 
 state [OK] = (COUNT(CRITICAL) < 0)
