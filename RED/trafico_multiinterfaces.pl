@@ -1,4 +1,13 @@
 #!/usr/bin/perl
+##############Trafico_Interfaces##############
+## Version : 0.1
+## Date :  2016 04 
+## Author  : Juargo (Jorge Retamal)
+## GIT: https://github.com/Juargo/Monitoreo
+##################################################################
+##
+use strict;
+use Getopt::Long;
 use Cwd 'abs_path';
 
 $DIR=substr(abs_path($0),0,-22);
